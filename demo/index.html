@@ -3,7 +3,9 @@
 <head>
     <title>dygraphs demo</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dygraph/1.0.1/dygraph-combined.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dygraph/1.0.1/dygraph-combined.js"></script>    -->
+    <script src="http://dygraphs.com/1.1.1/dygraph-combined.js"></script>    
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-sanitize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.js"></script>
@@ -30,6 +32,7 @@
                          data="graph.data"
                          options="graph.options"
                          legend="graph.legend"
+                         months="i18nMonths"
                     >
             </ng-dygraphs>
         </div>
@@ -60,6 +63,8 @@
                 }
             }
         };
+
+        $scope.i18nMonths = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
 
         var base_time = Date.parse("2008/07/01");
         var num = 24 * 0.25 * 365;
